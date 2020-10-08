@@ -1,0 +1,23 @@
+\documentclass[
+uplatex, a4j, dvipdfmx, 10pt, oneside
+]{jsbook}
+%
+\usepackage{preamble}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\title{関東夏ロボコン2020~講習会資料}
+\author{関東春・夏ロボコン運営委員会\thanks{\href{mailto:kantouharurobo.official@gmail.com}{kantouharurobo.official@gmail.com}}}
+\date{\today}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\include{mecha/mecha}
+\include{circuit/circuit}
+\include{control/control}
+\include{management/management}
+\include{conclusion}
+%
+\bibliographystyle{ieeetr}
+\nocite{*}
+\bibliography{control}
+\end{document}

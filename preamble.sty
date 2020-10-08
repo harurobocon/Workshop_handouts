@@ -1,0 +1,64 @@
+\usepackage[hmargin=25truemm,top=25truemm,bottom=30truemm]{geometry}
+\usepackage{cite}
+\usepackage{subfig}
+\usepackage{amsmath, amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{ascmac}
+\usepackage{fancyhdr}
+\usepackage[usenames]{color}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{url}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{physics}
+\usepackage{tikz, pgf}
+\usepackage{gnuplottex}
+\usepackage[uplatex,deluxe]{otf}
+\usepackage{layout}
+\usepackage[pdf]{graphviz}
+\usepackage{empheq}
+\usepackage{okumacro}
+\usepackage{booktabs}
+%
+\allowdisplaybreaks[1]%%alignなどがページにまたがるのを許す
+\makeatletter
+	\renewcommand{\theequation}{% 式番号の付け方
+	\thechapter.\arabic{equation}}
+	\@addtoreset{equation}{chapter}
+    %
+	\renewcommand{\thefigure}{% 図番号の付け方
+	\thechapter.\arabic{figure}}
+	\@addtoreset{figure}{chapter}
+    %
+	\renewcommand{\thetable}{% 表番号の付け方
+	\thechapter.\arabic{table}}
+	\@addtoreset{table}{chapter}
+\makeatother
+%
+\newcommand{\etc}{$_{\rm{etc.}}$}
+\newcommand{\dif}{\mathrm{d}}
+\newcommand{\todo}[1]{
+    \textcolor{red}{\textbf{(TODO: #1)}}
+}
+\newcommand{\eq}[1]{(\ref{eq:#1})}
+\newcommand{\fig}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\sfig}[2]{Fig.~\ref{fig:#1}\subref{fig:#2}}
+\newcommand{\tab}[1]{Table~\ref{tab:#1}}
+\renewcommand\UrlFont{\rmfamily}
+\renewcommand{\figurename}{Fig.~}
+\renewcommand{\tablename}{Table~}
+\renewcommand{\labelenumii}{\alph{enumii}.}
+\renewcommand{\labelenumiii}{\roman{enumiii})}
+\definecolor{ashgrey}{gray}{0.8}
+%
+\hypersetup{% hyperrefオプションリスト
+setpagesize=false,
+ bookmarksnumbered=true, %
+ bookmarksopen=true, %
+ colorlinks=true, %
+ linkcolor=black,
+ urlcolor=blue,
+ citecolor=black,
+}
